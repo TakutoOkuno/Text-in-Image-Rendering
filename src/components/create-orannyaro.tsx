@@ -3,12 +3,13 @@ import {ChangeEvent} from "react";
 
 interface Props {
     onChange: (e: ChangeEvent) => void;
-    onClick: (e: React.MouseEvent) => void;
+    onClick: () => void;
+    href: string;
 }
 
-const CreateOrannyaro: React.FC<Props> = ({onChange, onClick}) => <>
+const CreateOrannyaro: React.FC<Props> = ({onChange, onClick, href}) => <div>
     <input type="text" onChange={onChange}/>
-    <input type="button" onClick={onClick} value="そんなやつおらんやろ！"/>
-</>;
+    <a href={href === null ? undefined : href} download="おらんやろ.png"><input type="button" onClick={onClick} value="そんなやつおらんやろ！"/></a>
+</div>;
 
 export default CreateOrannyaro;
