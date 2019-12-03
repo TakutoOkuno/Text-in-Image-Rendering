@@ -10,7 +10,7 @@ interface Props {
 const InputUi: React.FC<Props> = ({onChange, onClick, href}) => <div>
     <input type="text" onChange={onChange} placeholder="文字を入力..."/>
     <button onClick={onClick}>Render Text</button>
-    <a href={href === null ? undefined : href} download="おらんやろ.png"><button>Download as PNG</button></a>
+    <a href={href === null ? undefined : href} download="text-in-image.png"><button>Download as PNG</button></a>
     <style jsx>{`
         div {
             margin: 2px 0;
