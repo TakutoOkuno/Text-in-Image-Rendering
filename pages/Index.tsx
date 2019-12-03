@@ -11,7 +11,7 @@ const Index: React.FC = () => {
         setWord(e.target.value);
     };
     async function handleClick() {
-        await useLoadImage("/static/img/peing.jpeg", canvas);
+        await useLoadImage("/img/peing.jpeg", canvas);
         useDrawText(canvas, word);
         setImageUrl(canvas.current.toDataURL());
     }
@@ -19,7 +19,7 @@ const Index: React.FC = () => {
 
 
     useEffect(() => {
-        useLoadImage("/static/img/peing.jpeg", canvas).then();
+        useLoadImage("/img/peing.jpeg", canvas).then();
     }, [canvas]);
 
     return <div>
