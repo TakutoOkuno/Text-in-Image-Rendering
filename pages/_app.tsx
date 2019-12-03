@@ -1,4 +1,4 @@
-import App, {AppContext} from "next/app";
+import App from "next/app";
 import * as React from "react";
 import Head from "next/head";
 
