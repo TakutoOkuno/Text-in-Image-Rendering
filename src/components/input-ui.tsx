@@ -12,6 +12,9 @@ const InputUi: React.FC<Props> = ({onChange, onClick, href}) => <div>
     <button onClick={onClick}>Render Text</button>
     <a href={href === null ? undefined : href} download="おらんやろ.png"><button>Download as PNG</button></a>
     <style jsx>{`
+        div {
+            margin: 2px 0;
+        }
         input {
             border: 1px solid #000;
             padding: 2px;
