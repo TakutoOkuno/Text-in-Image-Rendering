@@ -1,5 +1,5 @@
+import React from "react";
 import App from "next/app";
-import * as React from "react";
 import Head from "next/head";
 
 export default class MyApp extends App{

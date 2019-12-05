@@ -1,8 +1,7 @@
-import * as React from "react";
-import {ChangeEvent} from "react";
+import React, { ChangeEvent } from "react";
 
 interface Props {
-    onChange: (e: ChangeEvent) => void;
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
     onClick: () => void;
     href: string;
 }
