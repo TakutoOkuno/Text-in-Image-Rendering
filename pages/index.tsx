@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState, useRef, useCallback } from "react";
+import React, {ChangeEvent, useEffect, useState, useRef, useCallback} from "react";
 import InputUi from "../src/components/input-ui";
 import {useDrawText, useLoadImage} from "../src/custom-hooks/custom-hooks";
 
@@ -13,7 +13,9 @@ const Index: React.FC = () => {
     }, []);
     const handleClick = useCallback(() => {
         (async function () {
-            if (canvas.current === null) { return; }
+            if (canvas.current === null) {
+                return;
+            }
             await useLoadImage("/img/peing.jpeg", canvas.current);
             useDrawText(canvas.current, sentence);
             setImageUrl(canvas.current.toDataURL());
@@ -22,7 +24,9 @@ const Index: React.FC = () => {
 
     // 今回は最初しか呼ばれないためdepsは不要
     useEffect(() => {
-        if (canvas.current === null) { return; }
+        if (canvas.current === null) {
+            return;
+        }
         useLoadImage("/img/peing.jpeg", canvas.current).then();
     }, []);
 
